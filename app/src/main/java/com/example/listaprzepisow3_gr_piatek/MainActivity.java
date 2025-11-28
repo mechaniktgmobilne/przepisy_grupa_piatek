@@ -2,6 +2,7 @@ package com.example.listaprzepisow3_gr_piatek;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
@@ -23,6 +24,8 @@ ListView listViewKategorie;
                     public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                         view.setBackgroundColor(Color.GRAY);
                         Toast.makeText(MainActivity.this, "kliknięto element "+i, Toast.LENGTH_SHORT).show();
+                        Intent intent = new Intent(MainActivity.this,ListaPrzepisowActivity.class);
+                        startActivity(intent);
                     }
                 }
         );
