@@ -18,6 +18,7 @@ public class RepozytoriumPrzepisow {
     }
 
     public static ArrayList<Przepis> zwrocPrzepisy(){
+        wygenerujPrzepisy();
         return przepisy;
     }
     public static ArrayList<Przepis> zwrocPrzepisyWKategorii(String kategoria){
