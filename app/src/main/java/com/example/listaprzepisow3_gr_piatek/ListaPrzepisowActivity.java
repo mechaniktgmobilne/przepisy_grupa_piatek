@@ -18,9 +18,9 @@ public class ListaPrzepisowActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lista_przepisow);
+String wybranaKatagoria = getIntent().getStringExtra("KATEGORIA");
 
-
-        przepisyArrayList = RepozytoriumPrzepisow.zwrocPrzepisy();
+        przepisyArrayList = RepozytoriumPrzepisow.zwrocPrzepisZDanejKategorii(wybranaKatagoria);
         listViewPrzepisy = findViewById(R.id.listViewPrzepisy);
         arrayAdapter = new ArrayAdapter<>(
                 ListaPrzepisowActivity.this,

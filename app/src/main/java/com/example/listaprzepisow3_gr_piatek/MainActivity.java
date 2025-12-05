@@ -23,8 +23,11 @@ ListView listViewKategorie;
                     @Override
                     public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                         view.setBackgroundColor(Color.GRAY);
-                        Toast.makeText(MainActivity.this, "kliknięto element "+i, Toast.LENGTH_SHORT).show();
+                        //Toast.makeText(MainActivity.this, "kliknięto element "+i, Toast.LENGTH_SHORT).show();
+                        String wybranaKategoria = adapterView.getItemAtPosition(i).toString();
+
                         Intent intent = new Intent(MainActivity.this,ListaPrzepisowActivity.class);
+                        intent.putExtra("KATEGORIA",wybranaKategoria);
                         startActivity(intent);
                     }
                 }
